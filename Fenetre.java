@@ -1,8 +1,9 @@
-import java.awt.event.*;
-import javax.swing.JPanel;
+import java.awt.event.ActionEvent;
+
 import javax.swing.JFrame;
-import javax.swing.*;
+import javax.swing.JMenu;
 import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 
 public class Fenetre extends JFrame {
 
@@ -15,6 +16,9 @@ public class Fenetre extends JFrame {
 	private JMenuItem routeur = new JMenuItem("Ajouter un routeur");
 	private JMenuItem hub = new JMenuItem("Ajouter un hub");
 	private JMenuItem switch1 = new JMenuItem("Ajouter un switch");
+	
+	private JMenu analyse = new JMenu("Analyse");
+	private JMenuItem trame = new JMenuItem("Visualiser une Trame");
 	
 
 	public Fenetre() {
@@ -38,8 +42,13 @@ public class Fenetre extends JFrame {
 		this.edition.add(hub);
 		this.edition.add(switch1);
 		
+		this.analyse.add(trame);
+			trame.addActionListener((ActionEvent arg0) ->{
+				FenetreTrame trame = new FenetreTrame();
+			});
 		menuBar.add(fichier);
 		menuBar.add(edition);
+		menuBar.add(analyse);
 	}
 
 }
