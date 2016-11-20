@@ -1,25 +1,22 @@
+
+import java.awt.Color;
+
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 
-public class FenetreCorrection extends JFrame{
-	private JLabel label = new JLabel();
-	private JPanel panel = new JPanel();
+public class FenetreCorrection extends JFrame {
 	
-	public FenetreCorrection(){
+	public FenetreCorrection() {
 		this.setTitle("Correction");
-		this.setSize(500, 400);
-		
-		label.setText("La réponse est: Bonne chance pour le module!");
-		panel.add(label);
+		this.setSize(850, 700);
 
-		
-		this.add(panel);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
+		PanneauCorrection pan = new PanneauCorrection();
 		
-		
+		this.setBackground(Color.WHITE);
+
+		this.setContentPane(pan);
 	}
 
 }
