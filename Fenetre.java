@@ -23,7 +23,7 @@ public class Fenetre extends JFrame {
 
 	public Fenetre() {
 		this.setTitle("Demonstrateur TCP/IP");
-		this.setSize(1200, 700);
+		this.setSize(1300, 800);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
