@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JButton;
 
 public class Fenetre extends JFrame {
 
@@ -20,6 +21,11 @@ public class Fenetre extends JFrame {
 	private JMenu analyse = new JMenu("Analyse");
 	private JMenuItem trame = new JMenuItem("Visualiser une Trame");
 	
+	private JButton bMachine = new JButton("Machine");
+	private JButton bSwitch = new JButton("Switch");
+	private JButton bRouteur = new JButton("Routeur");
+	private JButton bHub = new JButton("Hub");
+	
 
 	public Fenetre() {
 		this.setTitle("Demonstrateur TCP/IP");
@@ -29,6 +35,16 @@ public class Fenetre extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 
+		//barre des tâches
+		
+		JPanel pan = new JPanel();
+
+		pan.add(bMachine);
+		pan.add(bSwitch);
+		pan.add(bRouteur);
+		pan.add(bHub);
+		this.setContentPane(pan);
+		
 		
 		//Barre de Menu
 		this.setJMenuBar(menuBar);
